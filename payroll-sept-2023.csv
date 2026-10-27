@@ -1,0 +1,8 @@
+Employee{employeeId=10, employeeName='Dana Wyatt', hoursWorked=52.5, payRate=12.5}
+Employee{employeeId=20, employeeName='Ezra Aiden', hoursWorked=17.0, payRate=16.75}
+Employee{employeeId=30, employeeName='Brittany Thibbs', hoursWorked=40.0, payRate=16.5}
+Employee{employeeId=40, employeeName='Zephaniah Hughes', hoursWorked=2.0, payRate=10.0}
+Employee{employeeId=50, employeeName='Caylee Callahan', hoursWorked=35.0, payRate=15.5}
+Employee{employeeId=60, employeeName='Zane Stephens', hoursWorked=45.0, payRate=13.5}
+Employee{employeeId=70, employeeName='Maverick Cummings', hoursWorked=25.5, payRate=16.5}
+Employee{employeeId=80, employeeName='Kamari Todd', hoursWorked=32.0, payRate=14.5}
