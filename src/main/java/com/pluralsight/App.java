@@ -11,13 +11,24 @@ public class App {
 
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader("employees.csv"));
+            bufferedReader.readLine();
 
             String line;
+            System.out.println("-------------");
             while ((line = bufferedReader.readLine()) != null) {
                 String[] values = line.split("\\|");
 
-                Employee employee = new Employee(int.parseInt(values[0]), values[1], values[2], values [3])
+                Employee employee = new Employee(Integer.parseInt(values[0]), values[1], Double.parseDouble(values[2]), Double.parseDouble(values[3]));
 
+                double hours = employee.getHoursWorked();
+                double rate = employee.getPayRate();
+
+                System.out.printf("Paystub for %s\n", employee.getEmployeeName());
+                System.out.println("Employee ID: " + employee.getEmployeeId());
+                System.out.println("Hours Worked: " + hours);
+                System.out.printf("Pay Rate: $%.2f\n", rate);
+                System.out.printf("Gross Pay: $%.2f\n", employee.getGrossPay(hours, rate));
+                System.out.println("-------------");
             }
 
             bufferedReader.close();
