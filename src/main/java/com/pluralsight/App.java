@@ -2,14 +2,22 @@ package com.pluralsight;
 
 
 import java.io.*;
+import java.util.Scanner;
 
 public class App {
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("employees.csv"));
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("payroll-sept-2023.csv"));
+            System.out.println("Enter the name of the file to be read: ");
+            String fileToRead = scanner.nextLine();
+
+            System.out.println("Enter the name of the file to be created: ");
+            String fileToWrite = scanner.nextLine();
+
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(fileToRead));
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileToWrite));
 
             bufferedReader.readLine();
 
@@ -24,7 +32,7 @@ public class App {
                 double hours = employee.getHoursWorked();
                 double rate = employee.getPayRate();
 
-                bufferedWriter.write(employee.toString() + "\n");
+                bufferedWriter.write(employee.toJson() + "\n");
 
 //                System.out.printf("Paystub for %s\n", employee.getEmployeeName());
 //                System.out.println("Employee ID: " + employee.getEmployeeId());

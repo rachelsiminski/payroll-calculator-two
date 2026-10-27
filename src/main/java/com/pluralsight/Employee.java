@@ -59,4 +59,8 @@ public class Employee {
                 ", payRate=" + payRate +
                 '}';
     }
+
+    public String toJson() {
+        return String.format("{ \"id\": %d, \"name\": \"%s\", \"grossPay\": %.2f }", getEmployeeId(), getEmployeeName(), getGrossPay(getHoursWorked(), getPayRate()));
+    }
 }
